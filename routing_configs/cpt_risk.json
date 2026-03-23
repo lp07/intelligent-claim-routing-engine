@@ -1,0 +1,25 @@
+{
+  "description": "CPT procedure codes with elevated denial risk. Based on common prior-auth requirements and bundling rules.",
+  "risk_categories": {
+    "prior_auth_required": {
+      "description": "Procedures requiring prior authorization from most payers. Missing auth = near-certain denial.",
+      "risk_points": 5,
+      "codes": ["99285", "99284", "99283", "27447", "27130", "22612", "43239", "43240", "43264", "70553", "70553", "93306", "93307", "93308"]
+    },
+    "bundling_risk": {
+      "description": "Codes frequently denied for bundling — payer considers them included in another service billed same day.",
+      "risk_points": 4,
+      "codes": ["99024", "99025", "93005", "93010", "71045", "71046", "77080", "77081"]
+    },
+    "medical_necessity_scrutiny": {
+      "description": "Codes subject to heightened medical necessity review. Diagnosis must clearly support service.",
+      "risk_points": 3,
+      "codes": ["99215", "99214", "99213", "99232", "99233", "90837", "90834", "G0438", "G0439"]
+    },
+    "frequency_limit_risk": {
+      "description": "Codes with payer-imposed frequency limits — billing too often triggers denial.",
+      "risk_points": 3,
+      "codes": ["80053", "85025", "36415", "93000", "G0008", "G0009", "G0010"]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "description": "Score thresholds and dollar escalation rules for queue assignment.",
+  "queue_thresholds": {
+    "AUTO_PROCESS": {
+      "min_score": 0,
+      "max_score": 20,
+      "description": "Low risk — submit immediately without human review",
+      "target_turnaround_hours": 2
+    },
+    "REVIEW": {
+      "min_score": 21,
+      "max_score": 45,
+      "description": "Medium risk — billing team review before submission",
+      "target_turnaround_hours": 24
+    },
+    "HOLD": {
+      "min_score": 46,
+      "max_score": 70,
+      "description": "High risk — senior coder review and correction required",
+      "target_turnaround_hours": 48
+    },
+    "REJECT": {
+      "min_score": 71,
+      "max_score": 100,
+      "description": "Critical errors present — appeal or write-off",
+      "target_turnaround_hours": 72
+    }
+  },
+  "escalation_rules": {
+    "description": "Claims meeting BOTH score threshold AND dollar threshold get ESCALATE queue instead of HOLD or REJECT",
+    "dollar_threshold": 2000,
+    "score_threshold": 46,
+    "escalation_queue": "ESCALATE",
+    "target_turnaround_hours": 4
+  },
+  "timely_filing_urgency": {
+    "description": "Extra points added based on how close claim is to timely filing deadline",
+    "critical_days_remaining": 10,
+    "critical_points": 15,
+    "warning_days_remaining": 30,
+    "warning_points": 8,
+    "approaching_days_remaining": 60,
+    "approaching_points": 3
+  },
+  "dollar_value_tiers": {
+    "high_value_threshold": 2000,
+    "high_value_points": 5,
+    "medium_value_threshold": 1000,
+    "medium_value_points": 3
+  }
+}

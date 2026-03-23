@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+.DS_Store
+.pytest_cache/
+data/sample_project1_output.csv
+data/sample_output/routed_claims_*.csv
+data/sample_output/action_worklist_*.csv
+data/sample_output/queue_summary_*.json

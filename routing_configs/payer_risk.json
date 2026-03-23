@@ -1,0 +1,26 @@
+{
+  "description": "Payer-specific denial risk weights. Higher = stricter payer = higher base risk score.",
+  "rationale": {
+    "CIGNA": "90-day timely filing window (industry's strictest). Requires prior auth on most procedures. Highest denial rate in portfolio.",
+    "AETNA": "180-day timely filing. Strict subscriber ID format. HMO plans require referrals.",
+    "BCBS": "365-day timely filing but strict taxonomy and modifier requirements.",
+    "HUMANA": "365-day timely filing. Taxonomy required. Known for medical necessity denials.",
+    "MEDICARE": "365-day window but strict NUCC taxonomy and CLIA requirements. Lowest commercial denial rate."
+  },
+  "weights": {
+    "CIGNA":    10,
+    "AETNA":    8,
+    "BCBS":     5,
+    "HUMANA":   5,
+    "MEDICARE": 4,
+    "DEFAULT":  3
+  },
+  "timely_filing_days": {
+    "CIGNA":    90,
+    "AETNA":    180,
+    "BCBS":     365,
+    "HUMANA":   365,
+    "MEDICARE": 365,
+    "DEFAULT":  365
+  }
+}

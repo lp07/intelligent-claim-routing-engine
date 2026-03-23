@@ -1,0 +1,88 @@
+{
+  "run_timestamp": "2026-03-23 01:20:07",
+  "total_claims": 1200,
+  "total_billed": 3419569.88,
+  "queues": {
+    "AUTO_PROCESS": {
+      "count": 429,
+      "pct_of_total": 35.8,
+      "total_billed": 1221908.07,
+      "avg_risk_score": 13.0,
+      "payers": {
+        "BCBS": "134",
+        "HUMANA": "130",
+        "MEDICARE": "118",
+        "AETNA": "47"
+      }
+    },
+    "REVIEW": {
+      "count": 304,
+      "pct_of_total": 25.3,
+      "total_billed": 874959.77,
+      "avg_risk_score": 29.8,
+      "payers": {
+        "CIGNA": "156",
+        "AETNA": "95",
+        "BCBS": "19",
+        "MEDICARE": "17",
+        "HUMANA": "17"
+      }
+    },
+    "HOLD": {
+      "count": 119,
+      "pct_of_total": 9.9,
+      "total_billed": 128914.68,
+      "avg_risk_score": 61.0,
+      "payers": {
+        "MEDICARE": "41",
+        "HUMANA": "29",
+        "BCBS": "26",
+        "AETNA": "17",
+        "CIGNA": "6"
+      }
+    },
+    "ESCALATE": {
+      "count": 299,
+      "pct_of_total": 24.9,
+      "total_billed": 1134808.53,
+      "avg_risk_score": 68.0,
+      "payers": {
+        "AETNA": "66",
+        "CIGNA": "65",
+        "HUMANA": "60",
+        "BCBS": "58",
+        "MEDICARE": "50"
+      }
+    },
+    "REJECT": {
+      "count": 49,
+      "pct_of_total": 4.1,
+      "total_billed": 58978.83,
+      "avg_risk_score": 76.8,
+      "payers": {
+        "CIGNA": "31",
+        "AETNA": "17",
+        "BCBS": "1"
+      }
+    }
+  },
+  "risk_distribution": {
+    "LOW": {
+      "count": 429,
+      "pct": 35.8
+    },
+    "MEDIUM": {
+      "count": 304,
+      "pct": 25.3
+    },
+    "HIGH": {
+      "count": 324,
+      "pct": 27.0
+    },
+    "CRITICAL": {
+      "count": 143,
+      "pct": 11.9
+    }
+  },
+  "avg_risk_score": 38.3
+}
