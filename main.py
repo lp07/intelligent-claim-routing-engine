@@ -1,3 +1,8 @@
+# =============================================================================
+# Copyright (c) 2025 Lisa Patel | github.com/lp07
+# Original portfolio project. Unauthorized commercial use prohibited.
+# Attribution required for any use, modification, or distribution.
+# =============================================================================
 """
 main.py — Intelligent Claim Routing Engine Entry Point
 
@@ -82,7 +87,8 @@ def main():
     summary       = reporter.generate_queue_summary(results)
     worklist_path = reporter.generate_action_worklist(results)
 
-    print(f"\nReports saved to: {args.output_dir}/")
+    print(f"
+Reports saved to: {args.output_dir}/")
     print(f"  Routed claims:    {os.path.basename(routed_path)}")
     if worklist_path:
         print(f"  Action worklist:  {os.path.basename(worklist_path)}")

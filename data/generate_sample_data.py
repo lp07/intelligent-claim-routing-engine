@@ -1,3 +1,8 @@
+# =============================================================================
+# Copyright (c) 2025 Lisa Patel | github.com/lp07
+# Original portfolio project. Unauthorized commercial use prohibited.
+# Attribution required for any use, modification, or distribution.
+# =============================================================================
 """
 generate_sample_data.py
 
@@ -97,5 +102,9 @@ if __name__ == "__main__":
     df = generate_project1_output(1200)
     df.to_csv("data/sample_project1_output.csv", index=False)
     print(f"Generated {len(df)} claims → data/sample_project1_output.csv")
-    print(f"\nStatus distribution:\n{df['status'].value_counts()}")
-    print(f"\nPayer distribution:\n{df['payer'].value_counts()}")
+    print(f"
+Status distribution:
+{df['status'].value_counts()}")
+    print(f"
+Payer distribution:
+{df['payer'].value_counts()}")

@@ -1,3 +1,8 @@
+# =============================================================================
+# Copyright (c) 2025 Lisa Patel | github.com/lp07
+# Original portfolio project. Unauthorized commercial use prohibited.
+# Attribution required for any use, modification, or distribution.
+# =============================================================================
 """
 reporter.py — Routing Report Generator
 
@@ -152,14 +157,16 @@ class RoutingReporter:
 
     def _print_summary(self, summary: dict):
         """Console output for operations visibility."""
-        print("\n" + "="*65)
+        print("
+" + "="*65)
         print("  INTELLIGENT CLAIM ROUTING — QUEUE SUMMARY")
         print("="*65)
         print(f"  Run Time:         {summary['run_timestamp']}")
         print(f"  Total Claims:     {summary['total_claims']}")
         print(f"  Total Billed:     ${summary['total_billed']:,.2f}")
         print(f"  Avg Risk Score:   {summary['avg_risk_score']}")
-        print(f"\n  QUEUE DISTRIBUTION:")
+        print(f"
+  QUEUE DISTRIBUTION:")
         for queue_name, stats in summary["queues"].items():
             print(
                 f"    {queue_name:<15} "
@@ -167,7 +174,9 @@ class RoutingReporter:
                 f"${stats['total_billed']:>12,.2f}  "
                 f"avg score: {stats['avg_risk_score']}"
             )
-        print(f"\n  RISK LEVEL DISTRIBUTION:")
+        print(f"
+  RISK LEVEL DISTRIBUTION:")
         for level, stats in summary["risk_distribution"].items():
             print(f"    {level:<12} {stats['count']:>4} claims ({stats['pct']:>5.1f}%)")
-        print("="*65 + "\n")
+        print("="*65 + "
+")
